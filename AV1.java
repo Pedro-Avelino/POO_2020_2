@@ -351,7 +351,7 @@ class Opinions
         }
         if (worst > 5)
         {
-            System.out.print("Não consigo encontrar Movies com este código.");
+            System.out.print("Não consigo encontrar filmes com este código.");
             return worst;
         }
         return worst;
