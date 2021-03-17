@@ -212,12 +212,12 @@ class VideoLibrary
             synopsis = Movies[i].getSynopsis().indexOf(word);
             if (name != -1)
             {
-                System.out.printf("Movie encontrado [%s] , pesquisa por nome voltou em: %d\n",Movies[i].getName(),name);
+                System.out.printf("Filme encontrado [%s] , pesquisa por nome voltou em: %d\n",Movies[i].getName(),name);
                 return name;
             }
             if (synopsis != -1)
             {
-                System.out.printf("Movie encontrado [%s] , pesquisa por synopsis voltou em: %d\n",Movies[i].getName(),synopsis);
+                System.out.printf("Filme encontrado [%s] , pesquisa por sinopse voltou em: %d\n",Movies[i].getName(),synopsis);
                 return synopsis;
             }
         }
@@ -227,7 +227,7 @@ class VideoLibrary
     public void showMovie()
     {
 
-        System.err.printf("Para mostrar todos os Movies digite all%n Procurar por genero, apenas digite-o:%n");
+        System.err.printf("Para mostrar todos os filmes digite all%n Procurar por genero, apenas digite-o:%n");
         Scanner input = new Scanner(System.in);
         String op = input.nextLine();
         
@@ -240,7 +240,7 @@ class VideoLibrary
         }
         else
         {
-            System.out.print("Encontrei os seguintes Movies:\n");
+            System.out.print("Encontrei os seguintes filmes:\n");
             for(int i = 0; i < getMovies().length; i++)
             {
 
@@ -297,7 +297,7 @@ class Opinions
         }
         if (sum == 0)
         {
-            System.out.print("Não foi possível encontrar um Movie com este identificador");
+            System.out.print("Não foi possível encontrar um filme com este identificador");
             return 0;
         }
         return average/sum;
@@ -324,7 +324,7 @@ class Opinions
         }
         if (best == -1)
         {
-            System.out.print("Nenhum Movie encontrado com esse código.");
+            System.out.print("Nenhum filme encontrado com esse código.");
             return best;
         }
         return best;
